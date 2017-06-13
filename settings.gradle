@@ -1,2 +1,3 @@
+include ':coolplayer'
 include 'vitamio'
 include 'vitamio-sample'
