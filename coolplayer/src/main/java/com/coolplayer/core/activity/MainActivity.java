@@ -154,7 +154,11 @@ public class MainActivity extends AppCompatActivity implements MyItemClickListen
         bottomPlayerView = (BottomPlayerView) findViewById(R.id.buttom_player_view);
         //请求权限
         MainActivityPermissionsDispatcher.requestPermissionWithCheck(this, this);
-
+        if(cursor!=null){
+            MediaCenter.mp3Infos = MediaUtil.getMusicInfo(cursor);
+            MediaCenter.mp3InfoList = MediaUtil.getMusicMaps(mp3Infos);
+            list.setAdapter(new MyFileItemRecyclerViewAdapter(MediaCenter.mp3InfoList, this));
+        }
         ViewOnclickListener ViewOnClickListener = new ViewOnclickListener();
         bottomPlayerView.mPlayView.btn_play.setOnClickListener(ViewOnClickListener);
         bottomPlayerView.mPlayView.btn_pause.setOnClickListener(ViewOnClickListener);
