@@ -18,12 +18,13 @@ import java.util.List;
 
 import io.vov.vitamio.MediaPlayer;
 
+import static com.coolplayer.dto.MediaCenter.current;
+
 public class PlayService extends Service {
     private MediaPlayer mediaPlayer; // 媒体播放器对象
     private String path;            // 音乐文件路径
     private int msg;
     private boolean isPause;        // 暂停状态
-    private int current = 0;        // 记录当前正在播放的音乐
     private List<Mp3Info> mp3Infos;   //存放Mp3Info对象的集合
     private int status = 3;         //播放状态，默认为顺序播放
     private MyReceiver myReceiver;  //自定义广播接收器
@@ -39,6 +40,7 @@ public class PlayService extends Service {
                     Intent intent = new Intent();
                     intent.setAction(Constant.MUSIC_CURRENT);
                     intent.putExtra(Constant.CURRENT, (int)currentTime);
+                    intent.putExtra(Constant.POS, current);
                     sendBroadcast(intent); // 给PlayerActivity发送广播
                     handler.sendEmptyMessageDelayed(1, 1000);
                 }
@@ -110,6 +112,10 @@ public class PlayService extends Service {
         myReceiver = new MyReceiver();
         IntentFilter filter = new IntentFilter();
         filter.addAction(Constant.CTL_ACTION);
+        filter.addAction(Constant.COL_PLAY);
+        filter.addAction(Constant.COL_PAUSE);
+        filter.addAction(Constant.COL_BEFORE);
+        filter.addAction(Constant.COL_NEXT);
         registerReceiver(myReceiver, filter);
     }
     /**
@@ -275,6 +281,20 @@ public class PlayService extends Service {
                     break;
                 case 4:
                     status = 4; //将播放状态置为4表示：随机播放
+                    break;
+            }
+            switch (intent.getAction()){
+                case Constant.COL_PLAY:
+                    play(0);
+                    break;
+                case Constant.COL_PAUSE:
+                    pause();
+                    break;
+                case Constant.COL_BEFORE:
+                    previous();
+                    break;
+                case Constant.COL_NEXT:
+                    next();
                     break;
             }
         }

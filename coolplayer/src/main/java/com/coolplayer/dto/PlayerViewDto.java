@@ -44,8 +44,8 @@ public class PlayerViewDto {
         btn_pause = (ImageButton) root.findViewById(R.id.btn_pause);
         btn_before = (ImageButton) root.findViewById(R.id.btn_before);
         btn_next = (ImageButton) root.findViewById(R.id.btn_next);
-        btn_like = (ImageButton) root.findViewById(R.id.btn_like);
-        btn_dislike = (ImageButton) root.findViewById(R.id.btn_dislike);
+//        btn_like = (ImageButton) root.findViewById(R.id.btn_like);
+//        btn_dislike = (ImageButton) root.findViewById(R.id.btn_dislike);
         btn_mode = (Button) root.findViewById(R.id.btn_mode);
         btn_list = (Button) root.findViewById(R.id.btn_list);
     }

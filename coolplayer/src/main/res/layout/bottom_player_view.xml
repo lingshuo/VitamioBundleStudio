@@ -99,14 +99,14 @@
         android:layout_marginStart="8dp" />
 
     <ImageButton
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_before"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintLeft_toRightOf="@+id/btn_pause"
         app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
-        app:srcCompat="@android:drawable/ic_media_next"
-        android:layout_marginStart="8dp" />
+        app:srcCompat="@android:drawable/ic_media_previous" />
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
@@ -118,34 +118,24 @@
         tools:layout_editor_absoluteX="115dp" />
 
     <ImageButton
-        android:id="@+id/btn_like"
+        android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/btn_next"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
-        app:srcCompat="@android:drawable/btn_star_big_off"
-        android:layout_marginStart="8dp" />
-
-    <ImageButton
-        android:id="@+id/btn_dislike"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        app:layout_constraintLeft_toRightOf="@+id/btn_next"
+        android:layout_marginStart="8dp"
+        app:layout_constraintLeft_toRightOf="@+id/btn_before"
         app:layout_constraintTop_toTopOf="@+id/btn_pause"
-        app:srcCompat="@android:drawable/btn_star_big_on"
-        android:layout_marginStart="8dp" />
+        app:srcCompat="@android:drawable/ic_media_next" />
 
     <Button
         android:id="@+id/btn_mode"
         android:layout_width="60dp"
         android:layout_height="51dp"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="0dp"
         android:text="顺序播放"
-        app:layout_constraintLeft_toRightOf="@+id/btn_like"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_subtitle"
+        app:layout_constraintLeft_toRightOf="@+id/btn_next"
+        android:layout_marginLeft="8dp" />
 
 </android.support.constraint.ConstraintLayout>

@@ -69,8 +69,8 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toRightOf="@+id/btn_before"
-        app:layout_constraintRight_toLeftOf="@+id/btn_next"
+        app:layout_constraintLeft_toRightOf="@+id/btn_next"
+        app:layout_constraintRight_toLeftOf="@+id/btn_before"
         app:layout_constraintTop_toBottomOf="@+id/seekBar_audio"
         app:layout_constraintVertical_bias="0.3"
         app:srcCompat="@android:drawable/ic_media_play" />
@@ -85,14 +85,14 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintLeft_toRightOf="@+id/btn_before"
-        app:layout_constraintRight_toLeftOf="@+id/btn_next"
+        app:layout_constraintLeft_toRightOf="@+id/btn_next"
+        app:layout_constraintRight_toLeftOf="@+id/btn_before"
         app:layout_constraintTop_toBottomOf="@+id/seekBar_audio"
         app:layout_constraintVertical_bias="0.304"
         app:srcCompat="@android:drawable/ic_media_pause" />
 
     <ImageButton
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_before"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -105,7 +105,7 @@
         app:srcCompat="@android:drawable/ic_media_next" />
 
     <ImageButton
-        android:id="@+id/btn_before"
+        android:id="@+id/btn_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"

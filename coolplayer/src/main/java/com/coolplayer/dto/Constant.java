@@ -44,4 +44,12 @@ public class Constant {
     public static final String DURATION = "duration" ;
     public static final String PROGRESS = "progress";
     public static final String CONTROL = "control";
+
+    public static final String COL_PLAY="play";
+    public static final String COL_PAUSE="pause";
+    public static final String COL_STOP="stop";
+    public static final String COL_BEFORE="before";
+    public static final String COL_NEXT ="next";
+
+
 }
