@@ -544,7 +544,7 @@ public class MainActivity extends AppCompatActivity implements MyItemClickListen
             } else if (action.equals(MUSIC_DURATION)) {
                 duration = intent.getIntExtra(Constant.DURATION, -1);
                 current = intent.getIntExtra(Constant.POS, -1);
-                currentTime = intent.getIntExtra(Constant.CURRENT, -1);
+                currentTime = intent.getLongExtra(Constant.CURRENT, -1);
                 mHandler.sendEmptyMessage(WHAT_INIT);
 //                bottomPlayerView.mPlayView.seekBar_audio.setMax(duration);
 //                bottomPlayerView.mPlayView.tv_timeTotal.setText(MediaUtil.formatTime(duration));
